@@ -56,7 +56,7 @@ set BEACON_SLEEP_MASK {
       $path = getFileProper(script_resource("x64"), "Release", $file_name);
    } 
    else if ($arch eq "x86") {
-      $path = getFileProper(script_resource("Release"), $file_name);
+      $path = getFileProper(script_resource("x86"), "Release", $file_name);
    }
    else {
       print_error("Error: Unsupported architecture: $arch");
@@ -102,7 +102,7 @@ alias run_beacongate_tests {
        $path = getFileProper(script_resource("x64"), "Release", $file_name);
     }
     else if ($barch eq "x86") {
-       $path = getFileProper(script_resource("Release"), $file_name);
+       $path = getFileProper(script_resource("x86"), "Release", $file_name);
     }
     else {
        print_error("Error: Unsupported architecture: $barch");
